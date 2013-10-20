@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Warframe Search",
-  "version": "1.0",
+  "version": "1.1",
   "description": "A Chrome Extension that allows you to search the Warframe Wiki.",
   
   "browser_action": {
