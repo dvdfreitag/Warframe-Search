@@ -32,7 +32,7 @@ function restore_name(val) {
 }	
 
 var submit = document.getElementById("submit");
-submit.addEventListener("click", GetWiki, true);
+submit.addEventListener("click", function() { GetWiki(); trackEvent(textBox.value, 'mouse'); }, true);
 
 var checkbox = document.getElementById("check");
 
@@ -46,7 +46,27 @@ var textBox = document.getElementById("textbox");
 textBox.addEventListener("keydown", function(event) {
 	if(event.keyCode == 13) {
 		GetWiki();
+		trackEvent(textBox.value, 'keyboard');
 	}
 });
 
 document.addEventListener('DOMContentLoaded', restore_store);
+
+var _AnalyticsCode = 'UA-44984742-1';
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', _AnalyticsCode]);
+_gaq.push(['_trackPageview']);
+
+(function() {
+	var ga = document.createElement('script');
+	ga.type = 'text/javascript';
+	ga.async = true;
+	ga.src = 'https://ssl.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ga, s);
+}());
+
+function trackEvent(search, method) {
+	console.log('Tracking search event: ' + search + ', From the ' + method);
+	_gaq.push(['_trackEvent', search, method]);
+}

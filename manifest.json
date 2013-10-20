@@ -16,6 +16,8 @@
 	"128": "icon128.png"
   },
   
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  
   "permissions": [
     "storage",
 	"tabs"
