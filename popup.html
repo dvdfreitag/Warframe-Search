@@ -3,20 +3,17 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
-
 	<body>
-		<a href="" ><img src="http://images2.wikia.nocookie.net/__cb7/warframe/images/8/89/Wiki-wordmark.png" id="wiki" alt="WARFRAME wiki" width="250" height="43"></a>
-		
-		<div align="center">
-			<input type="text" id="textbox" title="Enter a search string">
+		<div class="wrap">
+			<div align="center">
+				<a href=""><img src="http://images2.wikia.nocookie.net/__cb7/warframe/images/8/89/Wiki-wordmark.png" id="wiki" alt="WARFRAME wiki" width="250" height="43"></a>
+			</div>
+			<div class="input">
+				<input type="text" id="textbox" title="Enter a search string">
+				<button id="submit" title="Try just pressing enter instead"/>
+			</div>
+			<label><input type="checkbox" id="check" title="Check to go directly to the wiki page">Real Name</label>
 		</div>
-		
-		<div align="center">
-			<br><input type="checkbox" id="check" title="Check to go directly to the wiki page"> Real Name
-			<button id="submit" title="Try just pressing enter instead">Submit</button>
-			<script src="script.js"></script>
-		</div>
-		
-		
+		<script src="script.js"></script>		
 	</body>
 </html>
